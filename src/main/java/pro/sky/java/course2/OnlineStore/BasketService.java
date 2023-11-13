@@ -7,24 +7,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Scope
+
 public class BasketService {
 
 
-    List<Integer> basket;
+    Basket basket;
 
-    public BasketService(List<Integer> bask) {
-        this.basket = bask;
+    public BasketService(Basket basket) {
+        this.basket = basket;
     }
 
+    public void addInBasket(ArrayList<Integer> bask) {
 
-    public void addInBasket(ArrayList<Integer> list) {
-
-        basket.addAll(list);
+        basket.addInBasket(bask);
     }
 
 
     public List<Integer> getBasket() {
-        return basket;
+        return basket.getBasket();
     }
 }
